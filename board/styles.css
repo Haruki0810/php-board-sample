@@ -10,13 +10,21 @@ body {
 
 /* ヘッダー */
 h1 {
-    background-color: #4CAF50;
+    background-color: #837251;
     color: white;
     padding: 1rem;
     text-align: center;
     margin: 0;
     font-size: 2rem;
 }
+
+summary {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    color: #837251;
+}
+
 
 /* フォームのスタイル */
 form {
@@ -54,7 +62,7 @@ form textarea {
 }
 
 form button {
-    background-color: #4CAF50;
+    background-color: #837251;
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -65,7 +73,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #45a049;
+    background-color: #837251;
 }
 
 /* 削除ボタンのスタイル */
@@ -99,7 +107,7 @@ h2 {
     text-align: center;
     margin-top: 2rem;
     font-size: 1.8rem;
-    color: #4CAF50;
+    color: #837251;
 }
 
 .post {
@@ -124,7 +132,7 @@ h2 {
 
 .post strong {
     font-weight: bold;
-    color: #4CAF50;
+    color: #837251;
 }
 
 /* レスポンシブ対応 */
@@ -133,4 +141,13 @@ h2 {
     .post {
         width: 95%;
     }
+}
+.heart {
+    text-decoration: none;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+}
+.heart.red {
+    color: red;
 }
