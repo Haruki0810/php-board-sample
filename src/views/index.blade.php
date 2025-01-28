@@ -16,8 +16,8 @@
             <input type="text" name="search_name" placeholder="名前で検索">
             <input type="submit" name="submit" value="検索">
         </form>
-        <details>
-            <summary>投稿する</summary>
+        
+            <h2>投稿する</h2>
             <form method="post" action="">
                 <p>
                     <label for="name">タイトル:</label>
@@ -33,7 +33,7 @@
                 </p>
                 <button type="submit">投稿する</button>
             </form>
-        </details>
+        
     </aside>
 
     <h2>投稿一覧</h2>
@@ -51,24 +51,6 @@
                 echo nl2br($content); // 改行も保持
             ?>
         </p>
-
-        <!-- いいねボタン表示 -->
-        <?php
-        // $my_like配列が有効か確認
-        if (!isset($my_like)) {
-            $my_like = [];
-        }
-        $liked_posts = array_column($my_like, 'post_id');
-        $is_liked = in_array($post['id'], $liked_posts);
-        $current_page = isset($page) ? htmlspecialchars($page) : 1;
-        ?>
-
-        <?php if (!$is_liked): ?>
-        <a class="heart" href="index.php?like=<?php echo htmlspecialchars($post['id']); ?>&page=<?php echo $current_page; ?>">&#9825;</a>
-        <?php else: ?>
-        <a class="heart red" href="index.php?like=<?php echo htmlspecialchars($post['id']); ?>&page=<?php echo $current_page; ?>">&#9829;</a>
-        <?php endif; ?>
-        <span><?php echo !empty($post['like_cnt']) ? htmlspecialchars($post['like_cnt']) : '0'; ?> いいね</span>
 
         <!-- 削除ボタン -->
         <form class="deleteform" method="post" action="">
